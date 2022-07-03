@@ -13,17 +13,96 @@ body {
 
 .container {
 background-color: #fafafa;
+transform-origin: top left;
+transition: transform 0.5s linear;
+width: 100vw;
+min-height: 100vh;
+padding: 50px;
 }
 
 .container.show-nav {
-  padding-top: 0;
-  padding-bottom: 0;
   transform: rotate(-20deg);
 }
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #8458dc;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 40px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: capitalize;
+  color: #fff;
+  margin: 40px 0;
+  /* transform: translateX(-100%); */
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+font-size: 20px;
+margin-right: 10px;
+}
+
 
 p.cvlogo {
   font-size: 2em;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0;
+  /* -webkit-text-stroke: 1px white; */
+  text-shadow: 1px 1px black;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+
 }
