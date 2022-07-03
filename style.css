@@ -20,3 +20,10 @@ background-color: #fafafa;
   padding-bottom: 0;
   transform: rotate(-20deg);
 }
+
+p.cvlogo {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
